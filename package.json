@@ -1,6 +1,6 @@
 {
   "name": "marimo-pair",
-  "version": "0.0.16-pi.1",
+  "version": "0.0.16-pi.2",
   "description": "Agent Skills for pairing with live marimo notebooks, packaged for pi.",
   "license": "Apache-2.0",
   "repository": {
@@ -14,7 +14,14 @@
     "notebooks",
     "pi-coding-agent"
   ],
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "@sinclair/typebox": "*"
+  },
   "pi": {
+    "extensions": [
+      "./extensions"
+    ],
     "skills": [
       "./skills"
     ]

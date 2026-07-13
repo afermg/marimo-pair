@@ -38,8 +38,17 @@ Then load the skills when needed:
 /skill:retro-marimo-pair
 ```
 
+This fork also ships a small Pi extension layer that exposes two first-class
+custom tools to the model:
+
+- `marimo_discover_sessions`
+- `marimo_execute_code`
+
+So Pi can discover running marimo servers and execute code in live notebooks
+without relying only on free-form shell instructions.
+
 This fork adds explicit `package.json` metadata so pi can treat the repo as a
-first-class package, but the underlying skills remain standard Agent Skills.
+first-class package, while the underlying skills remain standard Agent Skills.
 
 ### Agent Skills (any tool)
 

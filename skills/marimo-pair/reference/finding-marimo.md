@@ -14,6 +14,22 @@ headless server. The notebook UI must be open in a browser before marimo has an
 active session for `execute-code` to target. If running headless, give the user
 the local URL and wait for them to open it before executing code.
 
+## Port selection
+
+When starting a **new** marimo server, prefer a port that is both:
+
+1. currently free, and
+2. already familiar in the user's workspace if possible.
+
+In practice this means:
+- first reuse an old marimo port if it is now unused;
+- otherwise pick a nearby conventional marimo port rather than a random high
+  port;
+- do not disturb an already-running server just to reclaim its port.
+
+This keeps browser bookmarks, SSH tunnels, forwarded ports, and local habits
+stable across sessions.
+
 How you invoke `marimo` depends on context — find the right way to run it.
 
 ## Notebooks with PEP 723 metadata require `--sandbox`

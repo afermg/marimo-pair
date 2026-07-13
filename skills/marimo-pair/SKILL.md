@@ -62,8 +62,13 @@ local process context. When multiple sessions are possible, target with
 If no server is running and the user wants a notebook, start marimo with
 `--no-token` (and without `--headless`) so it auto-registers for discovery. The
 notebook UI must be open before there is an active session for `execute-code`
-to target. The right way to invoke marimo depends on context (project tooling,
-global install, sandbox mode). If the notebook file contains a PEP 723 `#
+to target. When choosing a port for a new server, prefer a **free port that is
+already familiar in the current workspace** (for example a previously used
+marimo port that is no longer occupied, or a nearby standard marimo port)
+rather than introducing a fresh arbitrary port every time. Stable ports make it
+easier to reuse browser tabs, SSH forwards, and other local plumbing. The right
+way to invoke marimo depends on context (project tooling, global install,
+sandbox mode). If the notebook file contains a PEP 723 `#
 /// script` header, it MUST be opened with `--sandbox` — otherwise marimo
 ignores the inline dependencies. See
 [finding-marimo.md](reference/finding-marimo.md) for the full decision tree and

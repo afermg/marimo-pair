@@ -1,0 +1,22 @@
+{
+  "name": "marimo-pair",
+  "version": "0.0.16-pi.1",
+  "description": "Agent Skills for pairing with live marimo notebooks, packaged for pi.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afermg/marimo-pair.git"
+  },
+  "keywords": [
+    "pi-package",
+    "agent-skill",
+    "marimo",
+    "notebooks",
+    "pi-coding-agent"
+  ],
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  }
+}

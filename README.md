@@ -20,6 +20,27 @@
 
 ## Install
 
+### Pi
+
+Install the fork as a pi package:
+
+```bash
+pi install git:github.com/afermg/marimo-pair
+
+# or install only for the current project
+pi install -l git:github.com/afermg/marimo-pair
+```
+
+Then load the skills when needed:
+
+```bash
+/skill:marimo-pair
+/skill:retro-marimo-pair
+```
+
+This fork adds explicit `package.json` metadata so pi can treat the repo as a
+first-class package, but the underlying skills remain standard Agent Skills.
+
 ### Agent Skills (any tool)
 
 Works with any agent that supports the [Agent Skills](https://agentskills.io)
